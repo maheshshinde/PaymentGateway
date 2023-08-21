@@ -4,6 +4,315 @@
     "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.IntegrationTests\\PaymentGateway.Tests.IntegrationTests.csproj": {}
   },
   "projects": {
+    "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.API\\PaymentGateway.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.API\\PaymentGateway.API.csproj",
+        "projectName": "PaymentGateway.API",
+        "projectPath": "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.API\\PaymentGateway.API.csproj",
+        "packagesPath": "C:\\Users\\Mahesh\\.nuget\\packages\\",
+        "outputPath": "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mahesh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.Application\\PaymentGateway.Application.csproj": {
+                "projectPath": "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.Application\\PaymentGateway.Application.csproj"
+              },
+              "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.Infrastructure\\PaymentGateway.Infrastructure.csproj": {
+                "projectPath": "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.Infrastructure\\PaymentGateway.Infrastructure.csproj"
+              },
+              "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.Persistance\\PaymentGateway.Persistance.csproj": {
+                "projectPath": "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.Persistance\\PaymentGateway.Persistance.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.1.1, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.Data.Sqlite": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite.Core": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.Application\\PaymentGateway.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.Application\\PaymentGateway.Application.csproj",
+        "projectName": "PaymentGateway.Application",
+        "projectPath": "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.Application\\PaymentGateway.Application.csproj",
+        "packagesPath": "C:\\Users\\Mahesh\\.nuget\\packages\\",
+        "outputPath": "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mahesh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.Domain\\PaymentGateway.Domain.csproj": {
+                "projectPath": "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.Domain\\PaymentGateway.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.1.1, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.Domain\\PaymentGateway.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.Domain\\PaymentGateway.Domain.csproj",
+        "projectName": "PaymentGateway.Domain",
+        "projectPath": "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.Domain\\PaymentGateway.Domain.csproj",
+        "packagesPath": "C:\\Users\\Mahesh\\.nuget\\packages\\",
+        "outputPath": "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mahesh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.Infrastructure\\PaymentGateway.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.Infrastructure\\PaymentGateway.Infrastructure.csproj",
+        "projectName": "PaymentGateway.Infrastructure",
+        "projectPath": "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.Infrastructure\\PaymentGateway.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Mahesh\\.nuget\\packages\\",
+        "outputPath": "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mahesh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.Application\\PaymentGateway.Application.csproj": {
+                "projectPath": "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.Application\\PaymentGateway.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.IntegrationTests\\PaymentGateway.Tests.IntegrationTests.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -27,7 +336,14 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.API\\PaymentGateway.API.csproj": {
+                "projectPath": "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.API\\PaymentGateway.API.csproj"
+              },
+              "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.Application\\PaymentGateway.Application.csproj": {
+                "projectPath": "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.Application\\PaymentGateway.Application.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -63,6 +379,85 @@
             "coverlet.collector": {
               "target": "Package",
               "version": "[3.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.Persistance\\PaymentGateway.Persistance.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.Persistance\\PaymentGateway.Persistance.csproj",
+        "projectName": "PaymentGateway.Persistance",
+        "projectPath": "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.Persistance\\PaymentGateway.Persistance.csproj",
+        "packagesPath": "C:\\Users\\Mahesh\\.nuget\\packages\\",
+        "outputPath": "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.Persistance\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mahesh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.Domain\\PaymentGateway.Domain.csproj": {
+                "projectPath": "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.Domain\\PaymentGateway.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.Data.Sqlite": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite.Core": {
+              "target": "Package",
+              "version": "[7.0.10, )"
             }
           },
           "imports": [

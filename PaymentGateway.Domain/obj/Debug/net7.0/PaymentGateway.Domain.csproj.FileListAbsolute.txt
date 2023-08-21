@@ -1,10 +1,10 @@
+D:\CheckOut\PaymentGateway.API\PaymentGateway.Domain\bin\Debug\net7.0\PaymentGateway.Domain.deps.json
+D:\CheckOut\PaymentGateway.API\PaymentGateway.Domain\bin\Debug\net7.0\PaymentGateway.Domain.dll
+D:\CheckOut\PaymentGateway.API\PaymentGateway.Domain\bin\Debug\net7.0\PaymentGateway.Domain.pdb
 D:\CheckOut\PaymentGateway.API\PaymentGateway.Domain\obj\Debug\net7.0\PaymentGateway.Domain.GeneratedMSBuildEditorConfig.editorconfig
 D:\CheckOut\PaymentGateway.API\PaymentGateway.Domain\obj\Debug\net7.0\PaymentGateway.Domain.AssemblyInfoInputs.cache
 D:\CheckOut\PaymentGateway.API\PaymentGateway.Domain\obj\Debug\net7.0\PaymentGateway.Domain.AssemblyInfo.cs
 D:\CheckOut\PaymentGateway.API\PaymentGateway.Domain\obj\Debug\net7.0\PaymentGateway.Domain.csproj.CoreCompileInputs.cache
-D:\CheckOut\PaymentGateway.API\PaymentGateway.Domain\bin\Debug\net7.0\PaymentGateway.Domain.deps.json
-D:\CheckOut\PaymentGateway.API\PaymentGateway.Domain\bin\Debug\net7.0\PaymentGateway.Domain.dll
-D:\CheckOut\PaymentGateway.API\PaymentGateway.Domain\bin\Debug\net7.0\PaymentGateway.Domain.pdb
 D:\CheckOut\PaymentGateway.API\PaymentGateway.Domain\obj\Debug\net7.0\PaymentGateway.Domain.dll
 D:\CheckOut\PaymentGateway.API\PaymentGateway.Domain\obj\Debug\net7.0\refint\PaymentGateway.Domain.dll
 D:\CheckOut\PaymentGateway.API\PaymentGateway.Domain\obj\Debug\net7.0\PaymentGateway.Domain.pdb

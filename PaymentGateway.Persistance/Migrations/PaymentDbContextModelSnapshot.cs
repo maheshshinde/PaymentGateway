@@ -27,36 +27,27 @@ namespace PaymentGateway.Persistance.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("CVV")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("CardHolderName")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("CardNumber")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("CreatedDate")
+                    b.Property<DateTime>("CreatedDateTime")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Currency")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("ExpiryMonth")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("ExpiryYear")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<Guid>("MerchantId")
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("ModifiedDate")
                         .HasColumnType("TEXT");
 
                     b.Property<Guid>("PaymentId")

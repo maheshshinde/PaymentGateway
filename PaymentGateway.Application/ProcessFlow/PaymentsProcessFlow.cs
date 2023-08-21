@@ -47,21 +47,20 @@ namespace PaymentGateway.Application.ProcessFlow
                 // *** Bank Service
                 var bankResponse = await _bankService.MakePayment(request);
 
-                // *** Database update with payments
-                Payment payment = await _buildPaymentsModel.CreateModel(request, bankResponse);
-
-                paymentResponse.IsSuccess = await _paymentCommand.AddAsync(payment);
+                // *** Database update with payments, for guaranteed insertion queue solution to be implemented
+                Payment payment = await _buildPaymentsModel.CreatePaymentModel(request, bankResponse);
+                paymentResponse.IsSuccess = await _paymentCommand.InsertPaymentsAsync(payment);
                 paymentResponse.PaymentSuccessResponse.PaymentId = payment.PaymentId;
 
                 if (bankResponse.PaymentStatus == PaymentStatus.Accepted)
                 {
-                    paymentResponse.PaymentSuccessResponse.SuccessMessage = $"Payment {payment.PaymentId} successfully created for merchant {payment.MerchantId}";
+                    paymentResponse.PaymentSuccessResponse.SuccessMessage = $"[Application.PaymentsProcess Payment {payment.PaymentId} successfully created for merchant {payment.MerchantId}]";
                 }
 
                 if (bankResponse.PaymentStatus == PaymentStatus.Declined)
                 {
                     paymentResponse.IsSuccess = false;
-                    string errorMessage = $"Payment declied for merchant {payment.MerchantId} by card {payment.CardNumber}, reason {payment.PaymentRejectedReason} ";
+                    string errorMessage = $"[Application.PaymentsProcess Payment declined for merchant {payment.MerchantId} by card {payment.CardNumber}, reason {payment.PaymentRejectedReason} ]";
                     paymentResponse.PaymentFailureResponse.ErrorMessage = errorMessage;
                     _logger.LogError(errorMessage);
                 }
@@ -70,7 +69,7 @@ namespace PaymentGateway.Application.ProcessFlow
             {
                 paymentResponse.PaymentFailureResponse.ErrorMessage = ex.Message;
                 paymentResponse.IsSuccess = false;
-                _logger.LogError($"Error while processing the payment to {request.MerchantId} details: {ex.StackTrace}");
+                _logger.LogError($"[ Application.PaymentsProcess Error while processing the payment to {request.MerchantId} details: {ex.StackTrace} ]");
             }
 
             return paymentResponse;

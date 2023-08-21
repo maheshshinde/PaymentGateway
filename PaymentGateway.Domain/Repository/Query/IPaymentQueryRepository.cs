@@ -5,6 +5,6 @@ namespace PaymentGateway.Domain.Repository.Query
 {
     public interface IPaymentQueryRepository : IQueryRepository<Payment>
     {
-        public Task<IEnumerable<Payment>> GetMerchantPayments(Guid merchantId);
+        public Task<IEnumerable<Payment>> GetMerchantPaymentDetails(Guid merchantId, Guid paymentId);
     }
 }

@@ -9,14 +9,12 @@ namespace PaymentGateway.Domain.Entities.Base
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Int64 Id { get; set; }
 
-        public DateTime CreatedDate { get; set; }
+        public DateTime CreatedDateTime { get; set; }
 
-        public DateTime ModifiedDate { get; private set; }
 
         public BaseEntity()
         {
-            this.ModifiedDate = DateTime.Now;
-            this.CreatedDate = DateTime.Now;
+            this.CreatedDateTime = DateTime.Now;
         }
     }
 }

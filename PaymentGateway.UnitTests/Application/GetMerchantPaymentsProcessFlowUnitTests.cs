@@ -25,7 +25,7 @@ namespace PaymentGateway.Tests.UnitTests.Application
 
             _merchantPayments = new GetMerchantPaymentsProcessFlow(_paymentRepo.Object);
 
-            _paymentRepo.Setup(x => x.GetMerchantPayments(Guid.NewGuid()).Result).Returns(payments);
+            _paymentRepo.Setup(x => x.GetMerchantPaymentDetails(Guid.NewGuid(), Guid.NewGuid()).Result).Returns(payments);
         }
 
         [Test]
@@ -36,7 +36,7 @@ namespace PaymentGateway.Tests.UnitTests.Application
                 MerchantId = Guid.NewGuid(),
             };
 
-            var result = _merchantPayments.Process(request);
+            var result = _merchantPayments.GetMerchantPaymentDetailProcess(request);
 
             result.Should().NotBeNull();
         }

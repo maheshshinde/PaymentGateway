@@ -13,9 +13,9 @@ namespace PaymentGateway.Persistance.Repository.Query
             _context = context;
         }
 
-        public async Task<IEnumerable<Payment>> GetMerchantPayments(Guid merchantId)
+        public async Task<IEnumerable<Payment>> GetMerchantPaymentDetails(Guid merchantId, Guid paymentId)
         {
-            return await _context.Payments.Where(p => p.MerchantId == merchantId).ToListAsync();
+            return await _context.Payments.Where(p => p.MerchantId == merchantId && p.PaymentId == paymentId).ToListAsync();
         }
     }
 }

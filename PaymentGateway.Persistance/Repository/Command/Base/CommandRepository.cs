@@ -11,7 +11,7 @@ namespace PaymentGateway.Persistance.Repository.Command.Base
             _context = context;
         }
 
-        public async Task<bool> AddAsync(T entity)
+        public async Task<bool> InsertPaymentsAsync(T entity)
         {
             await _context.Set<T>().AddAsync(entity);
 

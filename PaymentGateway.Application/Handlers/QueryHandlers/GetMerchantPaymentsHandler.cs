@@ -16,7 +16,7 @@ namespace PaymentGateway.Application.Handlers.QueryHandlers
 
         public async Task<GetMerchantPaymentsResponse> Handle(GetMerchantPaymentsQuery request, CancellationToken cancellationToken)
         {
-            return await _process.Process(request);
+            return await _process.GetMerchantPaymentDetailProcess(request);
         }
     }
 }

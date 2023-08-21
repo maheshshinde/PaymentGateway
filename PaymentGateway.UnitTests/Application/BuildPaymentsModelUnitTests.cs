@@ -49,7 +49,7 @@ namespace PaymentGateway.Tests.UnitTests.Application
 
             _maskingService.Setup(x => x.MaskCardNumber("1111 1111 1111 1111").Result).Returns("************1111");
 
-            var result = _buildPaymentsModel.CreateModel(request, bankResponse).Result;
+            var result = _buildPaymentsModel.CreatePaymentModel(request, bankResponse).Result;
 
             result.CardHolderName.Should().NotBeNullOrWhiteSpace();
             result.CardNumber.Should().NotBeNullOrWhiteSpace();

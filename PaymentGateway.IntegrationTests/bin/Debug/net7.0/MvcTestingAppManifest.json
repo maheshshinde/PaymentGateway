@@ -1,1 +1,7 @@
-{ }
+{
+  "PaymentGateway.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.API",
+  "PaymentGateway.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.Application",
+  "PaymentGateway.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.Domain",
+  "PaymentGateway.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.Infrastructure",
+  "PaymentGateway.Persistance, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\CheckOut\\PaymentGateway.API\\PaymentGateway.Persistance"
+}

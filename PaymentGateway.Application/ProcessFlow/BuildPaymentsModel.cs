@@ -14,16 +14,18 @@ namespace PaymentGateway.Application.ProcessFlow
             _maskingService = maskingService;
         }
 
-        public async Task<Payment> CreateModel(ProcessPaymentsCommand request, BankResponse bankResponse)
+        public async Task<Payment> CreatePaymentModel(ProcessPaymentsCommand request, BankResponse bankResponse)
         {
             var payment = new Payment
             {
                 Amount = request.Amount,
                 Currency = request.Currency,
                 MerchantId = request.MerchantId,
-                CVV = request.CVV,
-                ExpiryMonth = request.ExpiryMonth,
-                ExpiryYear = request.ExpiryYear,
+
+                // *** typically these details not required to store in the db for payments details
+                //CVV = request.CVV,
+                //ExpiryMonth = request.ExpiryMonth,
+                //ExpiryYear = request.ExpiryYear,
 
                 PaymentStatus = bankResponse.PaymentStatus,
                 PaymentRejectedReason = bankResponse.RejectedReason,

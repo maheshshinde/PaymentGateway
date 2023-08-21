@@ -5,6 +5,6 @@ namespace PaymentGateway.Application.Interfaces
 {
     public interface IGetMerchantPaymentsProcessFlow
     {
-        public Task<GetMerchantPaymentsResponse> Process(GetMerchantPaymentsQuery request);
+        public Task<GetMerchantPaymentsResponse> GetMerchantPaymentDetailProcess(GetMerchantPaymentsQuery request);
     }
 }

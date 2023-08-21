@@ -2,6 +2,6 @@
 {
     public interface ICommandRepository<T> where T : class
     {
-       public Task<bool> AddAsync(T entity);
+       public Task<bool> InsertPaymentsAsync(T entity);
     }
 }

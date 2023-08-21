@@ -6,6 +6,6 @@ namespace PaymentGateway.Application.Interfaces
 {
     public interface IBuildPaymentsModel
     {
-        public Task<Payment> CreateModel(ProcessPaymentsCommand request, BankResponse bankResponse);
+        public Task<Payment> CreatePaymentModel(ProcessPaymentsCommand request, BankResponse bankResponse);
     }
 }

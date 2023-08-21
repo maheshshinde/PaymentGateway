@@ -15,15 +15,15 @@ namespace PaymentGateway.Application.ProcessFlow
             _paymentQueryRepository = paymentQueryRepository;
         }
 
-        public async Task<GetMerchantPaymentsResponse> Process(GetMerchantPaymentsQuery request)
+        public async Task<GetMerchantPaymentsResponse> GetMerchantPaymentDetailProcess(GetMerchantPaymentsQuery request)
         {
             GetMerchantPaymentsResponse merchantPaymentsResponse = new();
 
-            var payments = await _paymentQueryRepository.GetMerchantPayments(request.MerchantId);
+            var payments = await _paymentQueryRepository.GetMerchantPaymentDetails(request.MerchantId, request.PaymentId);
 
             if (!payments.Any())
             {
-                merchantPaymentsResponse.ErrorMessage = $"Payments not found for merchant {request.MerchantId}";
+                merchantPaymentsResponse.ErrorMessage = $"[ Application.GetMerchantPaymentDetailProcess Payment details not found for merchant {request.MerchantId} and Payment {request.PaymentId}]";
                 return merchantPaymentsResponse;
             }
 

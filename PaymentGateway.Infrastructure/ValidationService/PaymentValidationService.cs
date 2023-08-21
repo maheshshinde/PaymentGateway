@@ -3,22 +3,14 @@ using PaymentGateway.Application.Interfaces;
 
 namespace PaymentGateway.Infrastructure.ValidationService
 {
-    /// <summary>
-    /// Payment request validation
-    /// </summary>
     public class PaymentValidationService : IPaymentValidationService
     {
-        /// <summary>
-        /// Validate payments data
-        /// </summary>
-        /// <param name="payment">ProcessPaymentsCommand</param>
-        /// <returns>IEnumerable<string></returns>
         public async Task<IEnumerable<string>> ValidateData(ProcessPaymentsCommand payment)
         {
             if (payment == null)
             {
                 return new List<string> {
-                "Please enter all required fields."
+                "Please provide all required fields."
                 };
             }
 
@@ -42,15 +34,7 @@ namespace PaymentGateway.Infrastructure.ValidationService
                 validationSummary.Add("Currency is invalid.");
             }
 
-            // *** Validate CardDetails
-            if (payment == null)
-            {
-                validationSummary.Add("CardDetails are missing.");
-            }
-            else
-            {
-                validationSummary.AddRange(ValidateCardDetails(payment));
-            }
+            validationSummary.AddRange(ValidateCardDetails(payment));
 
             return await Task.FromResult(validationSummary);
         }

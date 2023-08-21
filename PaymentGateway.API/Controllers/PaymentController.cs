@@ -19,7 +19,7 @@ namespace PaymentGateway.API.Controllers
         [HttpPost("processpayment")]
         public async Task<ActionResult> ProcessPayment([FromBody] ProcessPaymentsCommand command)
         {
-            _logger.LogInformation($"API Process Payment {command.MerchantId}");
+            _logger.LogInformation($"[API.ProcessPayment Process Payment MerchanId = {command.MerchantId}]");
 
             var response = await _mediator.Send(command);
 
@@ -31,10 +31,10 @@ namespace PaymentGateway.API.Controllers
             return StatusCode(400, response.PaymentFailureResponse);
         }
 
-        [HttpGet("merchantpayments/{MerchantId}")]
+        [HttpGet("merchantpayments/{MerchantId}/{PaymentId}")]
         public async Task<ActionResult> GetMerchantPayments([FromRoute] GetMerchantPaymentsQuery query)
         {
-            _logger.LogInformation($"API Get Merchant Payments {query.MerchantId}");
+            _logger.LogInformation($"[API.GetMerchantPayments Get Merchant Payments PaymentId = {query.PaymentId}] ");
 
             var result = await _mediator.Send(query);
 
