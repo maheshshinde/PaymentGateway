@@ -2,24 +2,24 @@
 E-commerce is currently experiencing exponential growth, and with it comes the increasing need for merchants to sell their goods and services online. These merchants require a seamless way to collect payments from their customers. To cater to this demand, we intend to develop a robust payment gateway - an API-based application that empowers merchants to provide their shoppers with a convenient method for paying for their purchases.
 ## Requirements
 The product requirements for this initial phase are the following:
-•	A merchant should be able to process a payment through the payment gateway and receive either
-•	a successful or unsuccessful response.
-•	A merchant should be able to retrieve the details of a previously made payment. The next section
+-	A merchant should be able to process a payment through the payment gateway and receive either
+-	a successful or unsuccessful response.
+-	A merchant should be able to retrieve the details of a previously made payment. The next section
 
 ## Retrieving a payment’s details
 The second requirement for the payment gateway is to allow a merchant to retrieve details of a
 previously made payment using its identifier. Doing this will help the merchant with their reconciliation and reporting needs. The response should include a masked card number and card details along with a status code which indicates the result of the payment.
 ## Deliverables:
 Develop an API that enables merchants to:
-•	Initiate payment processing through the payment gateway.
-•	Retrieve details of previously completed transactions.
+-	Initiate payment processing through the payment gateway.
+-	Retrieve details of previously completed transactions.
 Create a mock bank simulator to facilitate thorough testing of the payment gateway API.
 ### Assumptions:
-•	Requirement is to mask the card details while retrieving the payment details, but I have implemented masking while saving the data to align with data protection rules.
-•	CVV codes will consist of either 3 or 4 digits.
-•	Card numbers will fall within the range of 13 to 19 digits.
-•	Foreign exchange conversion will not be required initially, as the system will exclusively support GBP transactions.
-•	Previous payment details by Merchants not by paymentId
+-	Requirement is to mask the card details while retrieving the payment details, but I have implemented masking while saving the data to align with data protection rules.
+-	CVV codes will consist of either 3 or 4 digits.
+-	Card numbers will fall within the range of 13 to 19 digits.
+-	Foreign exchange conversion will not be required initially, as the system will exclusively support GBP transactions.
+-	Previous payment details by Merchants not by paymentId
 ### Project Architecture:
 I have implemented the CQRS and MediatR patterns, adhering to SOLID design principles to ensure a robust and flexible architecture.
 
