@@ -46,6 +46,10 @@ How to run the application:
 *	Press F5 or click the "Start" button to build and run the Web API application locally.
 *	Visual Studio will launch a local development server and open a web browser, allowing to test the API endpoints.
 
+## How to run the API:
+
+** API Key to authenticate will be found on the appsettings.json, though it is not best practice, just to add simple security layer, I have added the key to appsettings.**
+
 ### Command Line:
 *	Open a command prompt or terminal window.
 *	Navigate to the root directory "Paymentgateway.API" of the Web API project
