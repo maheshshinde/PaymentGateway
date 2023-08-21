@@ -19,6 +19,7 @@ Create a mock bank simulator to facilitate thorough testing of the payment gatew
 -	Card numbers will fall within the range of 13 to 19 digits.
 -	Foreign exchange conversion will not be required initially, as the system will exclusively support GBP transactions.
 - Retrieve 	Previous payment details not the history of payments by unique Identified (MerchantId, paymentId)
+- Current implementation asks merchants to send their merchantId in the payment request, though there may be other best practices to do this for example - reading the merchantId from claims when the merchant authenticates using the identity services.
 ### Project Architecture:
 I have implemented the CQRS and MediatR patterns, adhering to SOLID design principles to ensure a robust and flexible architecture.
 
