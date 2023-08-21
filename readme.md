@@ -50,9 +50,6 @@ How to run the application:
 *	Visual Studio will launch a local development server and open a web browser, allowing to test the API endpoints.
 
 ## How to run the API:
-
-**API Key to authenticate will be found on the appsettings.json, though it is not the best practice, just implemented a simple security layer, I have added the key to appsettings.**
-
 ### Command Line:
 *	Open a command prompt or terminal window.
 *	Navigate to the root directory "Paymentgateway.API" of the Web API project
@@ -61,8 +58,61 @@ How to run the application:
   * dotnet build
   * dotnet watch or dotnet run
 
-The Web API will be hosted locally and accessible at a URL's **http://localhost:5057/swagger/index.html** and **https://localhost:7099/swagger/index.html**
+The Web API will be hosted locally and accessible at URLs **http://localhost:5057/swagger/index.html** and **https://localhost:7099/swagger/index.html**
 
+Pass Api_key = "Te$t@8080"  on the request Header to access API endpoints
+
+**API - ProcessPayment**
+**URI** - /api/Payment/processpayment
+
+**Request body** = {
+  "merchantId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "amount": 100,
+  "currency": "GBP",
+  "cardHolderName": "Xyz Abc",
+  "cardNumber": "1111 1111 1111 1111",
+  "expiryMonth": "12",
+  "expiryYear": "2028",
+  "cvv": "123"
+}
+
+**Invalid Response** = Status Code  400 BadRequest
+{
+  "validationSummary": [
+    "Amount must be greater than 0.",
+    "CardNumber is invalid.",
+    "ExpiryMonth is invalid.",
+    "ExpiryYear is invalid.",
+    "CVV is invalid."
+  ],
+  "errorMessage": "Please provide correct data"
+}
+**Valid Response** = Status code  201
+ {
+  "paymentId": "94903108-bc44-4c22-aeab-355249197576",
+  "successMessage": "[Application.PaymentsProcess Payment 94903108-bc44-4c22-aeab-355249197576 successfully created for merchant 3fa85f64-5717-4562-b3fc-2c963f66afa6]"
+}
+
+**API - MerchantPayments**
+**URI** - api/Payment/merchantpayments/{MerchantId}/{PaymentId}
+
+**Valid MerchantId and PaymentId Request** = Response Status Code  200
+**Response Body** = [
+  {
+    "paymentId": "94903108-bc44-4c22-aeab-355249197576",
+    "merchantId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+    "amount": 100,
+    "currency": "GBP",
+    "cardHolderName": "Xyz ***",
+    "cardNumber": "***************1111",
+    "expiryMonth": null,
+    "expiryYear": null,
+    "cvv": null
+  }
+]
+
+**Invalid MerchantId and PaymentId Request**: Response Status Code 204
+ 
 ### Docker:
 *	Make sure you have Docker Desktop installed on your machine.
 *	Open a command prompt or terminal window.
