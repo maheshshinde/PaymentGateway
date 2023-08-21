@@ -60,57 +60,57 @@ How to run the application:
 
 The Web API will be hosted locally and accessible at URLs **http://localhost:5057/swagger/index.html** and **https://localhost:7099/swagger/index.html**
 
-Pass Api_key = "Te$t@8080"  on the request Header to access API endpoints
+Pass Api_key = "Te$t@8080" on the request Header to access API endpoints
 
-**API - ProcessPayment**
-**URI** - /api/Payment/processpayment
+**API - ProcessPayment** <br>
+**URI** - /api/Payment/processpayment <br>
 
-**Request body** = {
-  "merchantId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-  "amount": 100,
-  "currency": "GBP",
-  "cardHolderName": "Xyz Abc",
-  "cardNumber": "1111 1111 1111 1111",
-  "expiryMonth": "12",
-  "expiryYear": "2028",
-  "cvv": "123"
+**Request body** = {<br>
+  "merchantId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",<br>
+  "amount": 100,<br>
+  "currency": "GBP",<br>
+  "cardHolderName": "Xyz Abc",<br>
+  "cardNumber": "1111 1111 1111 1111",<br>
+  "expiryMonth": "12",<br>
+  "expiryYear": "2028",<br>
+  "cvv": "123"<br>
 }
+<br>
+**Invalid Response** = Status Code  400 BadRequest<br>
+{<br>
+  "validationSummary": [<br>
+    "Amount must be greater than 0.",<br>
+    "CardNumber is invalid.",<br>
+    "ExpiryMonth is invalid.",<br>
+    "ExpiryYear is invalid.",<br>
+    "CVV is invalid."<br>
+  ],<br>
+  "errorMessage": "Please provide correct data"<br>
+}<br>
+**Valid Response** = Status code  201<br>
+ {<br>
+  "paymentId": "94903108-bc44-4c22-aeab-355249197576",<br>
+  "successMessage": "[Application.PaymentsProcess Payment 94903108-bc44-4c22-aeab-355249197576 successfully created for merchant 3fa85f64-5717-4562-b3fc-2c963f66afa6]"<br>
+}<br>
 
-**Invalid Response** = Status Code  400 BadRequest
-{
-  "validationSummary": [
-    "Amount must be greater than 0.",
-    "CardNumber is invalid.",
-    "ExpiryMonth is invalid.",
-    "ExpiryYear is invalid.",
-    "CVV is invalid."
-  ],
-  "errorMessage": "Please provide correct data"
-}
-**Valid Response** = Status code  201
- {
-  "paymentId": "94903108-bc44-4c22-aeab-355249197576",
-  "successMessage": "[Application.PaymentsProcess Payment 94903108-bc44-4c22-aeab-355249197576 successfully created for merchant 3fa85f64-5717-4562-b3fc-2c963f66afa6]"
-}
+**API - MerchantPayments**<br>
+**URI** - api/Payment/merchantpayments/{MerchantId}/{PaymentId}<br>
 
-**API - MerchantPayments**
-**URI** - api/Payment/merchantpayments/{MerchantId}/{PaymentId}
-
-**Valid MerchantId and PaymentId Request** = Response Status Code  200
-**Response Body** = [
-  {
-    "paymentId": "94903108-bc44-4c22-aeab-355249197576",
-    "merchantId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-    "amount": 100,
-    "currency": "GBP",
-    "cardHolderName": "Xyz ***",
-    "cardNumber": "***************1111",
-    "expiryMonth": null,
-    "expiryYear": null,
-    "cvv": null
-  }
-]
-
+**Valid MerchantId and PaymentId Request** = Response Status Code  200<br>
+**Response Body** = [<br>
+  {<br>
+    "paymentId": "94903108-bc44-4c22-aeab-355249197576",<br>
+    "merchantId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",<br>
+    "amount": 100,<br>
+    "currency": "GBP",<br>
+    "cardHolderName": "Xyz ***",<br>
+    "cardNumber": "***************1111",<br>
+    "expiryMonth": null,<br>
+    "expiryYear": null,<br>
+    "cvv": null<br>
+  }<br>
+]<br>
+<br>
 **Invalid MerchantId and PaymentId Request**: Response Status Code 204
  
 ### Docker:
