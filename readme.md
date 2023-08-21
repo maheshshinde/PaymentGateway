@@ -69,7 +69,7 @@ The Web API should now be accessible at http://localhost:8080.
 In addition to the core functionality, I have added the following features:
 *	API Key Authentication for application.
 *	Structured Logging using Serilog for enhanced logging.
-*	Segregated services for Acquiring Banks, payment details validation, and Data Masking.
+*	Mock services for Acquiring Banks, payment details validation, and Data Masking.
 
 ## Further Improvements:
 *	**Tests**: Due to time constraints, I have currently included a limited number of tests. It is essential to allocate time for creating more comprehensive Unit and Integration test scenarios. This approach will ensure coverage of all possible scenarios and achieve maximum code coverage.
