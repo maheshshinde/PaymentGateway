@@ -25,15 +25,15 @@ I have implemented the CQRS and MediatR patterns, adhering to SOLID design princ
 
 ### Project solution structure:
 The project's structure will be based on the Clean Architecture principles outlined in Uncle Bob's blog (https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html).
-*	Paymentgateway.API: This layer houses the API controllers responsible for handling incoming HTTP requests and returning responses. It serves as the entry point for external clients to interact with the application.
+*	**Paymentgateway.API**: This layer houses the API controllers responsible for handling incoming HTTP requests and returning responses. It serves as the entry point for external clients to interact with the application.
 
-*	Paymentgateway.Application: This layer encapsulates the core business logic and rules. It contains interfaces that define the contracts for various application services. This layer is independent of external concerns and focuses on implementing the application's use cases.
+*	**Paymentgateway.Application**: This layer encapsulates the core business logic and rules. It contains interfaces that define the contracts for various application services. This layer is independent of external concerns and focuses on implementing the application's use cases.
 
-*	Paymentgateway.Domain: Here, you'll find the domain entities that represent the fundamental concepts of clean architecture. It also holds repository interfaces, which define how to access and manage data related to these entities. The domain layer is the heart of the application's business logic.
+*	**Paymentgateway.Domain**: Here, you'll find the domain entities that represent the fundamental concepts of clean architecture. It also holds repository interfaces, which define how to access and manage data related to these entities. The domain layer is the heart of the application's business logic.
 
-*	Paymentgateway.Persistence: This layer is responsible for implementing the repository interfaces defined in the domain layer. It handles data storage and retrieval operations, connecting your application's business logic with the underlying database. It maintains separation from the domain layer to ensure a clear distinction between data manipulation and business rules.
+*	**Paymentgateway.Persistence**: This layer is responsible for implementing the repository interfaces defined in the domain layer. It handles data storage and retrieval operations, connecting your application's business logic with the underlying database. It maintains separation from the domain layer to ensure a clear distinction between data manipulation and business rules.
 
-*	PaymentGateway.Infrastructure: This layer manages interactions with external services, such as third-party APIs. It ensures that these interactions are isolated from the core business logic and data layers, promoting modularity and ease of maintenance.
+*	**PaymentGateway.Infrastructure**: This layer manages interactions with external services, such as third-party APIs. It ensures that these interactions are isolated from the core business logic and data layers, promoting modularity and ease of maintenance.
 
 ## Pre-Requisites:
 *	.NET 7
@@ -51,10 +51,10 @@ How to run the application:
 *	Navigate to the root directory "Paymentgateway.API" of the Web API project
 *	Use the .NET CLI to build and run the application:
 
-  * dotnet watch or dotnet build
-  * dotnet run
+  * dotnet build
+  *  dotnet watch or dotnet run
 
-The Web API will be hosted locally and accessible at a URL's http://localhost:5057/swagger/index.html && https://localhost:7099/swagger/index.html.
+The Web API will be hosted locally and accessible at a URL's http://localhost:5057/swagger/index.html and https://localhost:7099/swagger/index.html.
 
 ### Docker:
 *	Make sure you have Docker Desktop installed on your machine.
@@ -74,38 +74,38 @@ In addition to the core functionality, I have added the following features:
 ## Further Improvements:
 *	Tests: Due to time constraints, I have currently included a limited number of tests. It is essential to allocate time for creating more comprehensive Unit and Integration test scenarios. This approach will ensure coverage of all possible scenarios and achieve maximum code coverage.
 
-*	Security: I have added API key authentication for application authentication, focusing on security beyond user authentication. Need to consider implementing Authentication, Authorization, and Multi-Factor Authentication, alongside Rate Limiting.
+*	**Security**: I have added API key authentication for application authentication, focusing on security beyond user authentication. Need to consider implementing Authentication, Authorization, and Multi-Factor Authentication, alongside Rate Limiting.
 
-*	Communication: Integration of Email and SMS notification services will enhance communication with users and merchants.
+*	**Communication**: Integration of Email and SMS notification services will enhance communication with users and merchants.
 
-*	Reporting: To provide valuable insights, a separate Reporting Service needs to be developed.
+*	**Reporting**: To provide valuable insights, a separate Reporting Service needs to be developed.
 
-*	Scalability: To ensure scalability and maintainability as the system grows, need to create distinct services for Banking, Validation, and Data Masking
-*	Caching: Caching for read operations. 
+*	**Scalability**: To ensure scalability and maintainability as the system grows, need to create distinct services for Banking, Validation, and Data Masking
+*	**Caching**: Caching for frequently read operations. 
 
-*	Resilience: Need to include the Polly library for resilience.
+*	**Resilience**: Need to include the Polly library for resilience.
 
-*	Monitoring: Application logs need to be sent to tools such as Cloudwatch and AppInsights for efficient monitoring. Moreover, need to integrate with API Metrics tools like DataDog and Grafana for in-depth performance analysis.
+*	**Monitoring**: Application logs need to be sent to tools such as Cloudwatch and AppInsights for efficient monitoring. Moreover, need to integrate with API Metrics tools like DataDog and Grafana for in-depth performance analysis.
 
-*	Database Optimization: Consider transitioning data storage from SQLite to SQL or NoSQL databases for enhanced data management
+*	**Database Optimization**: Consider transitioning data storage from SQLite to SQL or NoSQL databases for enhanced data management
 
-*	CI/CD
+*	**CI/CD**
 
 ## Cloud Technologies:
 My decision between these cloud platforms would be influenced by the potential for cost optimization.
 
-Microsoft Azure:
+**Microsoft Azure:**
 Azure is particularly advantageous for deploying .NET applications due to its tight integration with the Microsoft technology stack.
 
-*	Azure App Service: Hosting the Web API as an Azure App Service. It provides easy deployment, scaling, and management.
-*	Azure Kubernetes Service (AKS): For more control over containerized deployments, AKS is a managed Kubernetes service that can host the Web API in containers.
-*	Azure Functions: For smaller microservices or event-driven scenarios, we can use Azure Functions to deploy individual functions as services.
-*	Azure SQL Database: For databases, Azure offers SQL Database for managed relational databases and Cosmos DB for NoSQL databases.
+*	**Azure App Service**: Hosting the Web API as an Azure App Service. It provides easy deployment, scaling, and management.
+*	**Azure Kubernetes Service (AKS)**: For more control over containerized deployments, AKS is a managed Kubernetes service that can host the Web API in containers.
+*	**Azure Functions**: For smaller microservices or event-driven scenarios, we can use Azure Functions to deploy individual functions as services.
+*	**Azure SQL Database**: For databases, Azure offers SQL Database for managed relational databases and Cosmos DB for NoSQL databases.
 
-Amazon Web Services (AWS):
+**Amazon Web Services (AWS):**
 AWS is a widely used cloud platform with a variety of services for hosting .NET applications.
 
-*	AWS Elastic Beanstalk: Similar to Azure App Service, Elastic Beanstalk provides a platform for deploying and managing web applications.
-*	Amazon ECS: For containerized deployments, Amazon Elastic Container Service (ECS) or Amazon Elastic Kubernetes Service (EKS) can be used.
-*	AWS Lambda: Like Azure Functions, AWS Lambda enables serverless microservices.
-*	Amazon RDS: For managed relational databases, you can use Amazon RDS, and for NoSQL databases, consider Amazon DynamoDB.
+*	**AWS Elastic Beanstalk**: Similar to Azure App Service, Elastic Beanstalk provides a platform for deploying and managing web applications.
+*	**Amazon ECS**: For containerized deployments, Amazon Elastic Container Service (ECS) or Amazon Elastic Kubernetes Service (EKS) can be used.
+*	**AWS Lambda**: Like Azure Functions, AWS Lambda enables serverless microservices.
+*	**Amazon RDS**: For managed relational databases, you can use Amazon RDS, and for NoSQL databases, consider Amazon DynamoDB.
