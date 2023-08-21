@@ -66,7 +66,6 @@ builder.Logging.AddSerilog(loggerSeriLog);
 var app = builder.Build();
 
 app.UseMiddleware<ExceptionHandlerMiddleware>();
-//app.UseMiddleware<ApiKeySecurityAttribute>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

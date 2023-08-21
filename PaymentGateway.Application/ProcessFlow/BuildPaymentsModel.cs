@@ -22,7 +22,7 @@ namespace PaymentGateway.Application.ProcessFlow
                 Currency = request.Currency,
                 MerchantId = request.MerchantId,
 
-                // *** typically these details not required to store in the db for payments details
+                // *** typically these details are not required to store in the db for payments details
                 //CVV = request.CVV,
                 //ExpiryMonth = request.ExpiryMonth,
                 //ExpiryYear = request.ExpiryYear,
