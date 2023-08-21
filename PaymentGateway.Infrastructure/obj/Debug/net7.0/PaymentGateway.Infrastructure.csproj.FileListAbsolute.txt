@@ -1,0 +1,17 @@
+D:\CheckOut\PaymentGateway.API\PaymentGateway.Infrastructure\bin\Debug\net7.0\PaymentGateway.Infrastructure.deps.json
+D:\CheckOut\PaymentGateway.API\PaymentGateway.Infrastructure\bin\Debug\net7.0\PaymentGateway.Infrastructure.dll
+D:\CheckOut\PaymentGateway.API\PaymentGateway.Infrastructure\bin\Debug\net7.0\PaymentGateway.Infrastructure.pdb
+D:\CheckOut\PaymentGateway.API\PaymentGateway.Infrastructure\obj\Debug\net7.0\PaymentGateway.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\CheckOut\PaymentGateway.API\PaymentGateway.Infrastructure\obj\Debug\net7.0\PaymentGateway.Infrastructure.AssemblyInfoInputs.cache
+D:\CheckOut\PaymentGateway.API\PaymentGateway.Infrastructure\obj\Debug\net7.0\PaymentGateway.Infrastructure.AssemblyInfo.cs
+D:\CheckOut\PaymentGateway.API\PaymentGateway.Infrastructure\obj\Debug\net7.0\PaymentGateway.Infrastructure.csproj.CoreCompileInputs.cache
+D:\CheckOut\PaymentGateway.API\PaymentGateway.Infrastructure\obj\Debug\net7.0\PaymentGateway.Infrastructure.dll
+D:\CheckOut\PaymentGateway.API\PaymentGateway.Infrastructure\obj\Debug\net7.0\refint\PaymentGateway.Infrastructure.dll
+D:\CheckOut\PaymentGateway.API\PaymentGateway.Infrastructure\obj\Debug\net7.0\PaymentGateway.Infrastructure.pdb
+D:\CheckOut\PaymentGateway.API\PaymentGateway.Infrastructure\obj\Debug\net7.0\ref\PaymentGateway.Infrastructure.dll
+D:\CheckOut\PaymentGateway.API\PaymentGateway.Infrastructure\bin\Debug\net7.0\PaymentGateway.Application.dll
+D:\CheckOut\PaymentGateway.API\PaymentGateway.Infrastructure\bin\Debug\net7.0\PaymentGateway.Domain.dll
+D:\CheckOut\PaymentGateway.API\PaymentGateway.Infrastructure\bin\Debug\net7.0\PaymentGateway.Application.pdb
+D:\CheckOut\PaymentGateway.API\PaymentGateway.Infrastructure\bin\Debug\net7.0\PaymentGateway.Domain.pdb
+D:\CheckOut\PaymentGateway.API\PaymentGateway.Infrastructure\obj\Debug\net7.0\PaymentGateway.Infrastructure.csproj.AssemblyReference.cache
+D:\CheckOut\PaymentGateway.API\PaymentGateway.Infrastructure\obj\Debug\net7.0\PaymentGateway.Infrastructure.csproj.CopyComplete
