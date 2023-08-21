@@ -44,9 +44,17 @@ How to run the application:
 
 *	Open the solution file in Visual Studio.
 *	Press F5 or click the "Start" button to build and run the Web API application locally.
-*	Visual Studio will launch a local development server and open a web browser, allowing to test the API endpoints.  
+*	Visual Studio will launch a local development server and open a web browser, allowing to test the API endpoints.
 
-The Web API will be hosted locally and accessible at a URL https://localhost:7099/swagger/index.html.
+### Command Line:
+*	Open a command prompt or terminal window.
+*	Navigate to the root directory "Paymentgateway.API" of the Web API project
+*	Use the .NET CLI to build and run the application:
+
+** dotnet watch or dotnet build
+** dotnet run
+
+The Web API will be hosted locally and accessible at a URL's http://localhost:5057/swagger/index.html && https://localhost:7099/swagger/index.html.
 
 ### Docker:
 *	Make sure you have Docker Desktop installed on your machine.
@@ -56,16 +64,6 @@ The Web API will be hosted locally and accessible at a URL https://localhost:709
 *	docker-compose up
 
 The Web API should now be accessible at http://localhost:8080.
-
-### Command Line:
-*	Open a command prompt or terminal window.
-*	Navigate to the root directory "Paymentgateway.API" of the Web API project
-*	Use the .NET CLI to build and run the application:
-
-dotnet build
-dotnet run
-
-The Web API will be hosted locally and accessible at a URL https://localhost:7099/swagger/index.html.
 
 ## Additional Features:
 In addition to the core functionality, I have added the following features:
@@ -82,7 +80,8 @@ In addition to the core functionality, I have added the following features:
 
 *	Reporting: To provide valuable insights, a separate Reporting Service needs to be developed.
 
-*	Scalability: To ensure scalability and maintainability as the system grows, need to create distinct services for Banking, Validation, and Data Masking, 
+*	Scalability: To ensure scalability and maintainability as the system grows, need to create distinct services for Banking, Validation, and Data Masking
+*	Caching: Caching for read operations. 
 
 *	Resilience: Need to include the Polly library for resilience.
 
