@@ -48,7 +48,7 @@ How to run the application:
 
 ## How to run the API:
 
-** API Key to authenticate will be found on the appsettings.json, though it is not best practice, just to add simple security layer, I have added the key to appsettings.**
+**API Key to authenticate will be found on the appsettings.json, though it is not the best practice, just implemented a simple security layer, I have added the key to appsettings.**
 
 ### Command Line:
 *	Open a command prompt or terminal window.
