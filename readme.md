@@ -2,8 +2,7 @@
 E-commerce is currently experiencing exponential growth, and with it comes the increasing need for merchants to sell their goods and services online. These merchants require a seamless way to collect payments from their customers. To cater to this demand, we intend to develop a robust payment gateway - an API-based application that empowers merchants to provide their shoppers with a convenient method for paying for their purchases.
 ## Requirements
 The product requirements for this initial phase are the following:
--	A merchant should be able to process a payment through the payment gateway and receive either
--	a successful or unsuccessful response.
+-	A merchant should be able to process a payment through the payment gateway and receive either a successful or unsuccessful response.
 -	A merchant should be able to retrieve the details of a previously made payment.
 
 ## Retrieving a payment’s details
