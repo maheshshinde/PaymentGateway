@@ -18,7 +18,7 @@ Create a mock bank simulator to facilitate thorough testing of the payment gatew
 -	CVV codes will consist of either 3 or 4 digits.
 -	Card numbers will fall within the range of 13 to 19 digits.
 -	Foreign exchange conversion will not be required initially, as the system will exclusively support GBP transactions.
-- Retrieve	Previous payment details/Transactions by Merchants, not by paymentId
+- Retrieve 	Previous payment details not the history of payments by unique Identified (MerchantId, paymentId)
 ### Project Architecture:
 I have implemented the CQRS and MediatR patterns, adhering to SOLID design principles to ensure a robust and flexible architecture.
 
@@ -80,22 +80,14 @@ In addition to the core functionality, I have added the following features:
 
 ## Further Improvements:
 *	**Tests**: Due to time constraints, I have currently included a limited number of tests. It is essential to allocate time for creating more comprehensive Unit and Integration test scenarios. This approach will ensure coverage of all possible scenarios and achieve maximum code coverage.
-
 *	**Security**: I have added API key authentication for application authentication, focusing on security beyond user authentication. Need to consider implementing Authentication, Authorization, and Multi-Factor Authentication, alongside Rate Limiting and other security enhancements.
-
 *	**Communication**: Integration of Email and SMS notification services will enhance communication with users and merchants.
-
 *	**Reporting**: To provide valuable insights, a separate Reporting Service needs to be developed.
-
 *	**Scalability**: To ensure scalability and maintainability as the system grows, need to create distinct services for Banking, Validation, and Data Masking
 *	**Caching**: Caching for frequently read operations. 
-
 *	**Resilience**: Need to include the Polly library for resilience.
-
 *	**Monitoring**: Application logs need to be sent to tools such as Cloudwatch and AppInsights for efficient monitoring. Moreover, need to integrate with API Metrics tools like DataDog and Grafana for in-depth performance analysis.
-
 *	**Database Optimization**: Consider transitioning data storage from SQLite to SQL or NoSQL databases for enhanced data management
-
 *	**CI/CD**
 
 ## Cloud Technologies:
