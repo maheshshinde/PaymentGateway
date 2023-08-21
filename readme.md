@@ -51,8 +51,8 @@ How to run the application:
 *	Navigate to the root directory "Paymentgateway.API" of the Web API project
 *	Use the .NET CLI to build and run the application:
 
-** dotnet watch or dotnet build
-** dotnet run
+  * dotnet watch or dotnet build
+  * dotnet run
 
 The Web API will be hosted locally and accessible at a URL's http://localhost:5057/swagger/index.html && https://localhost:7099/swagger/index.html.
 
