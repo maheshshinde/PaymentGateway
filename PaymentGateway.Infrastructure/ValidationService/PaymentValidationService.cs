@@ -29,7 +29,7 @@ namespace PaymentGateway.Infrastructure.ValidationService
             }
 
             // *** Validate Currency
-            if (string.IsNullOrEmpty(payment.Currency) || !IsValidCurrencyCode(payment.Currency))
+            if (string.IsNullOrWhiteSpace(payment.Currency) || !IsValidCurrencyCode(payment.Currency))
             {
                 validationSummary.Add("Currency is invalid.");
             }
@@ -68,7 +68,7 @@ namespace PaymentGateway.Infrastructure.ValidationService
             }
 
             // *** Validate CardHolderName
-            if (string.IsNullOrEmpty(cardDetails.CardHolderName))
+            if (string.IsNullOrWhiteSpace(cardDetails.CardHolderName))
             {
                 errors.Add("CardHolderName is required.");
             }
@@ -85,7 +85,7 @@ namespace PaymentGateway.Infrastructure.ValidationService
 
         public bool IsValidCardNumber(string cardNumber)
         {
-            if (cardNumber == null)
+            if (string.IsNullOrWhiteSpace(cardNumber))
             {
                 return false;
             }
@@ -109,7 +109,7 @@ namespace PaymentGateway.Infrastructure.ValidationService
 
         public bool IsValidExpiryMonth(string expiryMonth)
         {
-            if (expiryMonth == null)
+            if (string.IsNullOrWhiteSpace(expiryMonth))
             {
                 return false;
             }
@@ -127,7 +127,7 @@ namespace PaymentGateway.Infrastructure.ValidationService
 
         public bool IsValidExpiryYear(string expiryYear)
         {
-            if (expiryYear == null)
+            if (string.IsNullOrWhiteSpace(expiryYear))
             {
                 return false;
             }
@@ -148,7 +148,7 @@ namespace PaymentGateway.Infrastructure.ValidationService
 
         public bool IsValidCVV(string cvv)
         {
-            if (cvv == null)
+            if (string.IsNullOrWhiteSpace(cvv))
             {
                 return false;
             }

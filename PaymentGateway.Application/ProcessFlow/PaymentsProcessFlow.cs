@@ -40,6 +40,7 @@ namespace PaymentGateway.Application.ProcessFlow
                 {
                     paymentResponse.PaymentFailureResponse.ValidationSummary = validationErrors;
                     paymentResponse.IsSuccess = false;
+                    paymentResponse.PaymentFailureResponse.ErrorMessage = "Please provide correct data";
 
                     return paymentResponse;
                 }
