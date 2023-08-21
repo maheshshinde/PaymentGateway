@@ -4,7 +4,7 @@ E-commerce is currently experiencing exponential growth, and with it comes the i
 The product requirements for this initial phase are the following:
 -	A merchant should be able to process a payment through the payment gateway and receive either
 -	a successful or unsuccessful response.
--	A merchant should be able to retrieve the details of a previously made payment. The next section
+-	A merchant should be able to retrieve the details of a previously made payment.
 
 ## Retrieving a payment’s details
 The second requirement for the payment gateway is to allow a merchant to retrieve details of a
@@ -15,11 +15,11 @@ Develop an API that enables merchants to:
 -	Retrieve details of previously completed transactions.
 Create a mock bank simulator to facilitate thorough testing of the payment gateway API.
 ### Assumptions:
--	Requirement is to mask the card details while retrieving the payment details, but I have implemented masking while saving the data to align with data protection rules.
+-	The requirement is to mask card details during the retrieval of previously completed transactions, and I have implemented data masking while storing the data to comply with data protection regulations.
 -	CVV codes will consist of either 3 or 4 digits.
 -	Card numbers will fall within the range of 13 to 19 digits.
 -	Foreign exchange conversion will not be required initially, as the system will exclusively support GBP transactions.
--	Previous payment details by Merchants not by paymentId
+- Retrieve	Previous payment details/Transactions by Merchants, not by paymentId
 ### Project Architecture:
 I have implemented the CQRS and MediatR patterns, adhering to SOLID design principles to ensure a robust and flexible architecture.
 
@@ -52,9 +52,9 @@ How to run the application:
 *	Use the .NET CLI to build and run the application:
 
   * dotnet build
-  *  dotnet watch or dotnet run
+  * dotnet watch or dotnet run
 
-The Web API will be hosted locally and accessible at a URL's http://localhost:5057/swagger/index.html and https://localhost:7099/swagger/index.html.
+The Web API will be hosted locally and accessible at a URL's **http://localhost:5057/swagger/index.html** and **https://localhost:7099/swagger/index.html**
 
 ### Docker:
 *	Make sure you have Docker Desktop installed on your machine.
@@ -68,13 +68,13 @@ The Web API should now be accessible at http://localhost:8080.
 ## Additional Features:
 In addition to the core functionality, I have added the following features:
 *	API Key Authentication for application.
-*	Structured Logging using Serilog for enhanced traceability.
-*	Segregated services for Acquiring Banks, Input & Card Validation, and Data Masking.
-*	Utilization of Docker containers for efficient deployment and scalability.
-## Further Improvements:
-*	Tests: Due to time constraints, I have currently included a limited number of tests. It is essential to allocate time for creating more comprehensive Unit and Integration test scenarios. This approach will ensure coverage of all possible scenarios and achieve maximum code coverage.
+*	Structured Logging using Serilog for enhanced logging.
+*	Segregated services for Acquiring Banks, payment details validation, and Data Masking.
 
-*	**Security**: I have added API key authentication for application authentication, focusing on security beyond user authentication. Need to consider implementing Authentication, Authorization, and Multi-Factor Authentication, alongside Rate Limiting.
+## Further Improvements:
+*	**Tests**: Due to time constraints, I have currently included a limited number of tests. It is essential to allocate time for creating more comprehensive Unit and Integration test scenarios. This approach will ensure coverage of all possible scenarios and achieve maximum code coverage.
+
+*	**Security**: I have added API key authentication for application authentication, focusing on security beyond user authentication. Need to consider implementing Authentication, Authorization, and Multi-Factor Authentication, alongside Rate Limiting and other security enhancements.
 
 *	**Communication**: Integration of Email and SMS notification services will enhance communication with users and merchants.
 
