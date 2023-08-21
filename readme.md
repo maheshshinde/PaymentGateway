@@ -23,6 +23,10 @@ Create a mock bank simulator to facilitate thorough testing of the payment gatew
 ### Project Architecture:
 I have implemented the CQRS and MediatR patterns, adhering to SOLID design principles to ensure a robust and flexible architecture.
 
+The current project solutions may exhibit a monolithic structure, largely due to the existing requirement of implementing two endpoints. However, there is an opportunity to enhance scalability and deployment efficiency by logically segregating the Bank service, Validation service, and data masking service. This segregation would enable independent deployment and scaling of these components.
+
+Furthermore, our current approach of utilizing a single database implementation limits the advantages that the CQRS (Command Query Responsibility Segregation) pattern can offer. To harness the benefits of the CQRS pattern, we can easily partition write and read operations into separate services. This strategic separation would allow us to exploit the advantages of the CQRS pattern while retaining a cohesive architecture.
+
 ### Project solution structure:
 The project's structure will be based on the Clean Architecture principles outlined in Uncle Bob's blog (https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html).
 *	**Paymentgateway.API**: This layer houses the API controllers responsible for handling incoming HTTP requests and returning responses. It serves as the entry point for external clients to interact with the application.
