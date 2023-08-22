@@ -42,7 +42,8 @@ The project's structure will be based on the Clean Architecture principles outli
 ## Pre-Requisites:
 *	.NET 7
 *	Docker Desktop, if you would like to run the API on the docker container
-How to run the application:
+
+## How to run the application:
 
 ### Visual Studio:
 
