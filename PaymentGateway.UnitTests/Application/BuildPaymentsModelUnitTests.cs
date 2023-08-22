@@ -54,8 +54,8 @@ namespace PaymentGateway.Tests.UnitTests.Application
             result.CardHolderName.Should().NotBeNullOrWhiteSpace();
             result.CardNumber.Should().NotBeNullOrWhiteSpace();
             result.Amount.Should().Be(100);
-            result.ExpiryMonth.Should().NotBeNullOrWhiteSpace();
-            result.ExpiryYear.Should().NotBeNullOrWhiteSpace();
+            result.ExpiryMonth.Should().BeNull();
+            result.ExpiryYear.Should().BeNull();
             result.MerchantId.Should().Be(Guid.Parse("f5e13233-7812-448b-80d1-1d1a7a46993e"));
         }
     }

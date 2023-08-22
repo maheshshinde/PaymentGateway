@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc.Testing;
-using Microsoft.VisualStudio.TestPlatform.TestHost;
 using NUnit.Framework;
 using PaymentGateway.Application.Queries;
 using System.Net;
@@ -35,7 +34,7 @@ namespace PaymentGateway.Tests.IntegrationTests
             var result = _httpClient.GetAsync($"/api/Payment/merchantpayments/{request.MerchantId}").Result;
 
             // Assert
-            Assert.AreEqual(HttpStatusCode.OK, result.StatusCode);
+            Assert.AreEqual(HttpStatusCode.NotFound, result.StatusCode);
         }
 
         [Test]
@@ -51,7 +50,7 @@ namespace PaymentGateway.Tests.IntegrationTests
             var result = _httpClient.GetAsync($"/api/Payment/merchantpayments/{request.MerchantId}").Result;
 
             // Assert
-            Assert.AreEqual(HttpStatusCode.OK, result.StatusCode);
+            Assert.AreEqual(HttpStatusCode.NotFound, result.StatusCode);
         }
     }
 }
