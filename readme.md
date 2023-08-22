@@ -43,7 +43,7 @@ The project's structure will be based on the Clean Architecture principles outli
 *	.NET 7
 *	Docker Desktop, if you would like to run the API on the docker container
 
-## How to run the application:
+## How to run the API:
 
 ### Visual Studio:
 
@@ -51,7 +51,6 @@ The project's structure will be based on the Clean Architecture principles outli
 *	Press F5 or click the "Start" button to build and run the Web API application locally.
 *	Visual Studio will launch a local development server and open a web browser, allowing to test the API endpoints.
 
-## How to run the API:
 ### Command Line:
 *	Open a command prompt or terminal window.
 *	Navigate to the root directory "Paymentgateway.API" of the Web API project
