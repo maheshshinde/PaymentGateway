@@ -35,7 +35,7 @@ The project's structure will be based on the Clean Architecture principles outli
 
 *	**Paymentgateway.Domain**: Here, you'll find the domain entities that represent the fundamental concepts of clean architecture. It also holds repository interfaces, which define how to access and manage data related to these entities. The domain layer is the heart of the application's business logic.
 
-*	**Paymentgateway.Persistence**: This layer is responsible for implementing the repository interfaces defined in the domain layer. It handles data storage and retrieval operations, connecting your application's business logic with the underlying database. It maintains separation from the domain layer to ensure a clear distinction between data manipulation and business rules.
+*	**Paymentgateway.Persistence**: This layer is responsible for implementing the repository interfaces defined in the domain layer. It handles data storage and retrieval operations, connecting to the application's business logic with the underlying database. It maintains separation from the domain layer to ensure a clear distinction between data manipulation and business rules.
 
 *	**PaymentGateway.Infrastructure**: This layer manages interactions with external services, such as third-party APIs. It ensures that these interactions are isolated from the core business logic and data layers, promoting modularity and ease of maintenance.
 
@@ -138,7 +138,7 @@ In addition to the core functionality, I have added the following features:
 *	**Caching**: Caching for frequently read operations. 
 *	**Resilience**: Need to include the Polly library for resilience.
 *	**Monitoring**: Application logs need to be sent to tools such as Cloudwatch and AppInsights for efficient monitoring. Moreover, need to integrate with API Metrics tools like DataDog and Grafana for in-depth performance analysis.
-*	**Database Optimization**: Consider transitioning data storage from SQLite to SQL or NoSQL databases for enhanced data management
+*	**Database Optimization**: Transitioning data storage from SQLite to SQL or NoSQL databases for enhanced data management
 *	**CI/CD**
 
 ## Cloud Technologies:
@@ -158,4 +158,4 @@ AWS is a widely used cloud platform with a variety of services for hosting .NET 
 *	**AWS Elastic Beanstalk**: Similar to Azure App Service, Elastic Beanstalk provides a platform for deploying and managing web applications.
 *	**Amazon ECS**: For containerized deployments, Amazon Elastic Container Service (ECS) or Amazon Elastic Kubernetes Service (EKS) can be used.
 *	**AWS Lambda**: Like Azure Functions, AWS Lambda enables serverless microservices.
-*	**Amazon RDS**: For managed relational databases, you can use Amazon RDS, and for NoSQL databases, consider Amazon DynamoDB.
+*	**Amazon RDS**: For managed relational databases, can use Amazon RDS, and for NoSQL databases, like Amazon DynamoDB.
